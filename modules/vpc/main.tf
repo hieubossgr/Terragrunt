@@ -13,7 +13,7 @@ resource "aws_subnet" "ecs_private_subnets" {
   for_each = var.ecs_private_subnets
   vpc_id = aws_vpc.vpc.id
   cidr_block = cidrsubnet(var.vpc_cidr, 8, each.value)
-  availability_zone = tolist(data.aws_availability_zones.availability.names)[each.value - each.value/2*2 == 1 ? 1 : 2]
+  availability_zone = tolist(data.aws_availability_zones.availability.names)[((each.value%2)) == 1 ? 1 : 2]
   tags = {
     Name = each.key
   }
@@ -23,7 +23,7 @@ resource "aws_subnet" "cronjob_private_subnets" {
   for_each = var.cronjob_private_subnets
   vpc_id = aws_vpc.vpc.id
   cidr_block = cidrsubnet(var.vpc_cidr, 8, each.value)
-  availability_zone = tolist(data.aws_availability_zones.availability.names)[each.value - each.value/2*2 == 1 ? 1 : 2]
+  availability_zone = tolist(data.aws_availability_zones.availability.names)[((each.value%2)) == 1 ? 1 : 2]
   tags = {
     Name = each.key
   }
@@ -33,7 +33,7 @@ resource "aws_subnet" "rds_private_subnets" {
   for_each = var.rds_private_subnets
   vpc_id = aws_vpc.vpc.id
   cidr_block = cidrsubnet(var.vpc_cidr, 8, each.value)
-  availability_zone = tolist(data.aws_availability_zones.availability.names)[each.value - each.value/2*2 == 1 ? 1 : 2]
+  availability_zone = tolist(data.aws_availability_zones.availability.names)[(each.value%2) == 1 ? 1 : 2]
   tags = {
     Name = each.key
   }
@@ -44,7 +44,7 @@ resource "aws_subnet" "public_subnets" {
   for_each = var.public_subnets
   vpc_id = aws_vpc.vpc.id
   cidr_block = cidrsubnet(var.vpc_cidr, 8, each.value+100)
-  availability_zone = tolist(data.aws_availability_zones.availability.names)[each.value]
+  availability_zone = tolist(data.aws_availability_zones.availability.names)[(each.value%2) == 1 ? 1 : 2]
   map_public_ip_on_launch = true
   tags = {
     Name = each.key
