@@ -55,14 +55,3 @@ resource "aws_lb_listener" "ecs1-blue" {
     target_group_arn = aws_lb_target_group.ecs_target_group_blue.arn
   }
 }
-
-resource "aws_lb_listener" "ecs2-green" {
-  load_balancer_arn = aws_lb.custom_alb.arn
-  port              = 80
-  protocol          = "HTTP"
-
-  default_action {
-    type             = "forward"
-    target_group_arn = aws_lb_target_group.ecs_target_group_green.arn
-  }
-}

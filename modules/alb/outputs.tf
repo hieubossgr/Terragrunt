@@ -15,11 +15,6 @@ output "http_listener_ecs1_blue_arn" {
   description = "The ARN of the HTTP listener for the ALB."
 }
 
-output "http_listener_ecs2_green_arn" {
-  value = aws_lb_listener.ecs2-green.arn
-  description = "The ARN of the HTTP listener for the ALB."
-}
-
 output "ecs_target_group_ecs1_blue_arn" {
   value = aws_lb_target_group.ecs_target_group_blue.arn
   description = "The ARN of the ECS target group"
