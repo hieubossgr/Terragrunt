@@ -37,3 +37,11 @@ output "rds_private_subnet_1_id" {
 output "rds_private_subnet_2_id" {
   value = aws_subnet.rds_private_subnets["rds_private_subnet_2"].id
 }
+
+output "aws_availability_zone_1" {
+  value = tolist(data.aws_availability_zones.availability.names)[1]
+}
+
+output "aws_availability_zone_2" {
+  value = tolist(data.aws_availability_zones.availability.names)[2]
+}
