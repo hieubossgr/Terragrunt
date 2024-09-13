@@ -16,7 +16,7 @@
 - **S3 và S3 Gateway Endpoint:** Lưu trữ các resource static và cung cấp kết nối riêng tư.
 - **IAM Roles and Policies:** Quản lý quyền truy cập cho các dịch vụ AWS.
 
-![Overview Project](https://drive.usercontent.google.com/download?id=1C6TF5Tap7oYI2j2L5j5IiYU80TLNOsNv&export=view)
+![Overview Project](https://drive.usercontent.google.com/download?id=171n-kYj-z5F-UMzUL1hp4vY8Zk8tS9_o&export=view)
 
 ## System Structure
 ![Người dùng truy cập](https://drive.usercontent.google.com/download?id=1DErN6roSid-SM5t8NH66Y7yyyPPhX4ym&export=view)
