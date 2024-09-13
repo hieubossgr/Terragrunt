@@ -10,10 +10,10 @@
 - **Application Load Balancer (ALB):** Định tuyến lưu lượng tới các dịch vụ backend chạy trên ECS.
 - **ECS (Elastic Container Service) với Fargate:** Quản lý các ứng dụng container và cron jobs.
 - **Aurora RDS:** Cung cấp cơ sở dữ liệu aurora-mysql được quản lý.
-- **VPC và Security Groups:** Xác định ranh giới mạng và bảo mật.
-- **ECR (Elastic Container Registry):** Lưu trữ hình ảnh Docker cho các tác vụ ECS.
+- **VPC và Security Groups:** Cung cấp netwrok và security.
+- **ECR (Elastic Container Registry):** Lưu trữ image Docker cho các tác vụ ECS.
 - **CodeDeploy:** Tự động triển khai ứng dụng lên ECS.
-- **S3 và S3 Gateway Endpoint:** Lưu trữ các tài sản tĩnh và cung cấp kết nối riêng tư.
+- **S3 và S3 Gateway Endpoint:** Lưu trữ các resource static và cung cấp kết nối riêng tư.
 - **IAM Roles and Policies:** Quản lý quyền truy cập cho các dịch vụ AWS.
 
 ![Overview Project](https://drive.usercontent.google.com/download?id=1C6TF5Tap7oYI2j2L5j5IiYU80TLNOsNv&export=view)
