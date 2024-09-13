@@ -13,3 +13,13 @@ variable "route_table_ids" {
   description = "List of route table IDs to associate with the VPC endpoint"
   type        = list(string)
 }
+
+variable "role_name" {
+  description = "Name of IAM Role"
+  type        = string
+}
+
+variable "policy_name" {
+  description = "Name of IAM Policy"
+  type        = string
+}
