@@ -46,6 +46,11 @@ output "aws_availability_zone_1" {
 output "aws_availability_zone_2" {
   value = tolist(data.aws_availability_zones.availability.names)[2]
 }
+
+
+output "route_table_ecs" {
+  value = aws_route_table.private_route_table.id
+}
 #------------------------------------ VPC ------------------------------------#
 
 #------------------------------------ Secutiry Group ------------------------------------#
